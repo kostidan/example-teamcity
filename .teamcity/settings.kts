@@ -51,7 +51,7 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
         maven {
-            name = "make distrib"
+            name = "mvn clean deploy"
 
             conditions {
                 contains("teamcity.build.branch", "master")
